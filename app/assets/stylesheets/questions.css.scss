@@ -1,0 +1,35 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.question-title {
+  font-size: 30px;
+  line-height: 130%;
+  text-decoration: none;
+}
+
+.answer-body {
+  font-size: 18px;
+  color: #333;
+  padding-top: 8px;
+}
+
+.question-control {
+  float: right;
+}
+
+span.question-control{
+  font-size: 16px;
+  font-family: Lato-Regular;
+}
+
+.comment-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Lato-Regular;
+}
+
+.question-body {
+  font-size: 18px;
+  color: #333;
+  padding-top: 8px;
+}

@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "welcome";
+ @import "questions";
+ @import "sessions";
+
+ @font-face {
+   font-family: Lato-Bold;
+ }
+
+ @font-face {
+   font-family: Lato-Regular;
+   src: url('/fonts/Lato-Regular.ttf');
+ }
+
+ @font-face {
+   font-family: Lato-Light;
+   src: url('/fonts/Lato-Light.ttf');
+ }
+ @font-face {
+   font-family: Lato-thin;
+   src: url('/fonts/Lato-thin.ttf');
+ }
+
+ html, body {
+   font-family: Lato-Regular;
+   background-color: #f9f9f9;
+   padding-top: 50px;
+ }
+
+ /* BRAND LOGO */
+ .brand-image img {
+   height: 40px;
+   padding-top: 7px;
+ }
+
+ /* NAV BAR */
+ .navbar-default {
+   height: 50px;
+   background-color: white;
+ }
+
+ .askme-navbar-text {
+   font-size: 15px;
+   color: #777;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ /* NOTICE AND ALERT */
+ .notice-message {
+     font-size: 16px;
+     text-align: center;
+     text-transform: uppercase;
+     font-family: Lato-Bold;
+ }
+
+ .alert-message {
+     font-size: 16px;
+     text-align: center;
+     text-transform: uppercase;
+     font-family: Lato-Bold;
+ }

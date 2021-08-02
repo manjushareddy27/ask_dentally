@@ -1,0 +1,75 @@
+<!-- QUESTIONS SECTION -->
+
+<!-- <div class="title-section"> -->
+<div class="question-title">
+  <%= @question.title %>
+  <% if Current.user && Current.user == @question.user %>
+
+    <!-- DELETE QUESTION -->
+    <span class="question-control">
+      <%= link_to 'Delete', question_path, method: :delete, data: {confirm: 'Delete the question?'} %> |
+      <%= link_to 'Edit', edit_question_path %>
+    </span>
+  <% end %>
+</div>
+
+<div class="author">
+  <em>- <%= @question.user.email %> - <%= distance_of_time_in_words(Time.now, @question.created_at) %> ago</em>
+</div>
+
+<div class="question-body">
+  <%= @question.text %>
+</div>
+<hr>
+
+
+<!-- ANSWERS IN DESC ORDER -->
+<% @question.answers.order('id desc').each do |answer| %>
+  <p>
+    <% if answer.user != nil %>
+      <div class="author">
+        <em>- <%= answer.user.email %> answered <%= distance_of_time_in_words(Time.now, answer.created_at) %> ago- </em>
+      </div>
+
+      <div class="answer-body">
+        <%= answer.body %><hr>
+      </div>
+    <% end %>
+  </p>
+<% end %>
+
+<!-- ANSWERS SECTION -->
+<% if Current.user %>
+  <%= form_for([@question, @answer]) do |f| %>
+
+    <% if @answer.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved: </h2>
+
+        <ul>
+        <% @answer.errors.full_messages.each do |msg| %>
+          <p class="alert alert-info"><%= msg %><p>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+<!-- COMMENT BOX -->
+    <form>
+      <div class="form-group">
+        <div class="field">
+          <%= f.label :any_comments? %><br>
+          <%= f.text_area :body, class: "form-control askme-form-control", placeholder: "Enter a comment here" %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "answer", class: 'btn btn-primary login-btn' %>
+      </div>
+    </form>
+  <% end %>
+
+<!-- MUST SIGN IN TO LEAVE A COMMENT -->
+<% else %>
+  <p class><%= link_to "Comment", new_session_path, class: "comment-link" %> </p>
+<% end %>

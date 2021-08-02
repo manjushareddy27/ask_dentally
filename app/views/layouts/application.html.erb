@@ -10,7 +10,41 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+<div class="container-fluid">
+  <!--  NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header"></div>
+
+      <div class="collapse navbar-collapse">
+        <div class="navbar-text navbar-right askme-navbar-text">
+          <% if Current.user %>
+            Hi <%= Current.user.email %> | <%= link_to 'log out', session_path('current'), :method => :delete %>
+          <% else %>
+            <%= link_to 'log in', new_session_path %> or <%= link_to 'sign up', new_user_path %>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!--  NAVBAR -->
+
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <!--  NOTICE AND ALERTS -->
+      <% if flash[:notice] %>
+        <p id="notice" class="alert alert-info notice-message"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p id="alert" class="alert alert-danger alert-message"><strong>Oh snap! </strong> <%= flash[:alert] %></p>
+      <% end %>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>

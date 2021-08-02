@@ -1,0 +1,24 @@
+<h1 class="main-title">New question?</h1>
+
+<%= form_for :question, url: new_question_path, method: :post do |f| %>
+
+<form>
+  <div class="form-group">
+    <div class="field">
+      <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title, class: "form-control askme-form-control" %>
+      </p>
+
+      <p>
+        <%= f.label :text %><br>
+        <%= f.text_field :text, class: "form-control askme-form-control" %>
+      </p>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "submit", class: 'btn btn-primary login-btn' %>
+  </div>
+</form>
+<% end %>

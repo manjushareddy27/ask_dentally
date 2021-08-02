@@ -1,0 +1,92 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* ASK ME */
+.main-title {
+  font-family: Lato-Bold, sans-serif;
+  font-size: 50px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.main-title-askme {
+  font-family: Lato-Bold, sans-serif;
+  font-size: 50px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.ask-me {
+  line-height: 10px;
+}
+
+.tagline {
+  font-family: Lato-Regular,sans-serif;
+  color: #999;
+  font-size: 16px;
+  border-bottom: 1px solid;
+  border-bottom-color: #CCC;
+  padding-bottom: 17px;
+}
+
+
+/* QUESTION FORM */
+hr {
+  margin-bottom: 20px;
+  border-width: 3px 0px 0px;
+  margin-top: 40px;
+  color: #ccc;
+}
+
+.askme-form-control:focus {
+  border-color: #888;
+  box-shadow: none;
+}
+
+.askme-form-control{
+  font-size: 16px;
+  color: #888;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.label-field {
+  color: #777;
+  font-size: 20px;
+  font-family: Lato-Light;
+  padding-top: 30px;
+}
+
+
+/* LIST OF QUESTIONS */
+.question-title {
+  font-family: Lato-Bold;
+  color: #555;
+  padding-top: 25px;
+}
+
+a.title {
+  font-size: 30px;
+  line-height: 130%;
+  text-decoration: none;
+}
+
+.author {
+  color: #999;
+  font-size: 16px;
+  font-family: Lato-thin;
+  text-indent: -8px;
+  display: inline-block;
+}
+
+.answer-body {
+  color: #777;
+  font-family: Lato-thin;
+}
+
+.answer-count {
+  color: #333;
+  font-family: Lato-thin;
+}
