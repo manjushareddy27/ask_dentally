@@ -27,3 +27,10 @@ Open web application  && signup
 To view/post the questions please use below urls
 
 ```http://localhost:3000/questions/1``` or ```http://localhost:3000/questions/new```
+
+Notes & Explanations:
+* My approach was build a simple web application where user can sign up and create new questions and post answers for others questions.
+* We could still improvise this code by adding extra features so user can browse all questions without changing question id in url.
+* I definitely try to improvise this code if I get a chance to do.
+
+Thank you for taking your time to review my code.
