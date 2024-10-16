@@ -5,10 +5,6 @@ setup:
 Navigate to directory where the script is located
 
 ```$ cd ~/ask_dentally```
-
-
-Ensure gems installed by running
-
 ```bundle install```
 
 Run migrations
